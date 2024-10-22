@@ -1,0 +1,650 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+
+    background-color: #f9f9f9;
+}
+.navbar {
+	/*position: fixed;*/ /* Giữ phần header cố định khi kéo xuống */
+    top: 0; /* Cố định ở đầu trang */
+    /*left: 0;*/
+    width: 100%; /* Chiếm toàn bộ chiều rộng */
+    /*z-index: 1000;*/ /* Đảm bảo header nằm trên các phần tử khác */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    padding-right: 0px;
+    padding-left: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+    height: 65px;
+}
+/* Định dạng cho phần chứa hình ảnh */
+.header-images {
+    display: flex; /* Sử dụng flexbox để căn chỉnh các ảnh */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 40px; /* Khoảng cách giữa các ảnh */
+    padding-right: 50px;
+}
+
+/* Định dạng cho các ảnh trong header */
+.header-images img {
+    width: 25px; /* Chiều rộng của ảnh */
+    height: auto; /* Chiều cao tự động dựa vào chiều rộng */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+}
+.navbar .logo h1 {
+    font-size: 24px;
+    color: #000; /* Đổi thành màu đen cho phù hợp với nền sáng */
+    padding-left: 15px;
+}
+.navbar .logo h1 span {
+    padding-left: 25px;
+}
+h1 {
+	font-size: 20px;
+	color: #000;
+    font-family: Calibri, sans-serif;
+}
+h1 span {
+	font-size: 15px;
+    color: #888; /* Màu cho phần "FURNITURE" */
+    font-weight: lighter;
+    font-family: Calibri, sans-serif;
+}
+p span{
+	font-size: 20px;
+	font-family: Aptos;
+}
+.navbar nav {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    padding-left: 200px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+.navbar nav ul li{
+	margin: 0;
+}
+.navbar nav ul li a {
+	font-family: Calibri, sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+    text-decoration: none;
+    color: #000; /* Đổi thành màu đen cho phù hợp với nền sáng */
+    /*font-weight: 200;*/
+    margin-right: 20px;
+}
+.navbar a:hover{
+	color: #FF8C00;
+}
+
+/* Định dạng cho phần giỏ hàng */
+.cart-container {
+    width: 80%;
+    margin: 30px auto;
+    /*border: 1px solid #e0e0e0;*/
+    padding: 40px;
+    padding-top: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color:  #fff;
+}
+.cart-container h1{
+	text-align: center;
+	text-decoration: underline;
+	padding: 30px;
+	font-size: 22px;
+	color: #000;
+	/*background-color: rgb(128, 255, 255);*/
+}
+.cart-container a {
+    display: block; /* Biến thẻ a thành block element */
+    text-align: right; /* Căn chỉnh văn bản bên trong thẻ a sang phải */
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    padding-right:30px;
+}
+
+.cart-container a:hover{
+	color: red;
+	text-decoration: underline;
+}
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-info img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-button img {
+    width: 20px; /* Chiều rộng của hình ảnh */
+    height: 20px; /* Chiều cao của hình ảnh */
+}
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.checkout-button {
+    background-color: #50C878;
+    color: #fff;
+    padding: 17px 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 30px;
+}
+.checkout-button:hover {
+    background-color: #228B22;
+    /*color: #000;*/
+}
+
+
+/* Định dạng cho phần footer  #f3f3f3*/
+.footer {
+	width: 100%;
+    background-color:#EEEEEE;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    /*position: relative;*/
+    /*bottom: 0; /* Đặt footer ở dưới cùng */
+    /*left: 0;*/
+}
+.footer h3{
+	color: #000;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+}
+.footer div {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer p {
+	font-family: Calibri, sans-serif;
+    color: #ccc;
+    font-size: 14px;
+}
+.footer h2{
+	font-size: 25px;
+	color: #888;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+.footer img {
+	width: 20px; /* Chiều rộng của hình ảnh */
+    height: 20px; /* Chiều cao của hình ảnh */
+    
+    margin-bottom: 10px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 5px 0;
+}
+
+.footer a {
+	font-family: Tahoma, sans-serif;
+    text-decoration: none;
+    color: #333333;
+    font-size: 14px;
+}
+
+.footer a:hover {
+    color:#808080;
+    text-decoration: underline;
+}
+
+
+.chat-button {
+    position: fixed;
+    width:45px;
+    height:45px;
+    bottom: 20px;
+    right: 20px;
+	background-image: url('Images/chat.jpg'); /* Đường dẫn đến hình ảnh */
+    background-size: cover; /* Để hình ảnh phủ kín nút */
+    background-position: center; /* Đặt hình ảnh ở giữa nút */
+    border: none;
+    padding: 15px;
+    border-radius: 70px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	margin-top: 20px;
+	margin-right:15px;
+	background-color:#fff;
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 350px;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color:#000;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.send-button{
+	width: 30px; /* Chiều rộng của hình ảnh */
+    height: 30px;
+	background-image: url('Images/send.jpg'); /* Đường dẫn đến hình ảnh */
+    background-size: 30px; /* Để hình ảnh phủ kín nút */
+    background-position: center; /* Đặt hình ảnh ở giữa nút */
+	border-radius: 0px;
+	border: none;
+	margin-bottom: 50px;
+	z-index: 1000;
+}
+.chat-body {
+	width: 500px; /* Chiều rộng của hình ảnh */
+    height: 350px;
+    padding: 15px;
+}
+.chat-body p{
+	width: 240px;
+	background-color:#f2f2f2;
+	font-size:13px;
+	padding:7px;
+	border-radius: 7px;
+	font-family:Segoe UI, sans-serif;
+}
+.chat-body textarea {
+	width: 290px; /* Chiều rộng của hình ảnh */
+    height: 38px;
+    font-family: Segoe UI, sans-serif;
+    font-size:12px;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 242px;
+    z-index: 1000;
+}
+/* Status container */
+/* Định dạng cho phần chứa trạng thái */
+/* Định dạng cho phần chứa trạng thái */
+.status-container {
+    display: center;
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    margin: 0 10px; 
+    padding-bottom: 45px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.status-item {
+
+    gap: 30px; /* Điều chỉnh khoảng cách giữa các ảnh */
+    margin: 0 10px; 
+}
+
+.status-item img {
+    width: 65px; /* Kích thước icon */
+    height: auto;
+    margin: 0 50px; 
+    padding-left: 50px;
+   
+}
+
+.form-section {
+    padding: 30px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea,
+.form-group select {
+    width: 85%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #fff;
+    color: #555;
+}
+.form-group input[type="text"],
+.form-group input[type="email"]{
+    width: 25%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    background-color: #f7f7f7;
+    color: #555;
+}
+
+
+.form-group input[disabled] {
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+
+textarea {
+    resize: none;
+    height: 60px;
+}
+
+select {
+    background-color: #fff;
+    color: #333;
+}
+.form-group.row {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 100px;
+}
+.form-group.row .col {
+    flex: 1;
+    margin-right: 15px;
+}
+
+#name, #email, #phone {
+    width: 250px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 13px;
+    background-color: #e9ecef;
+    color: #6c757d;
+}
+#city {
+    width: 200px; 
+    padding: 10px;
+}
+#address{
+    width: 570px; 
+    padding: 10px;
+    height: 50px;
+    margin-right: 25px;
+}
+
+.form-group.row .col:last-child {
+    margin-right: 0; 
+}
+
+.card-con {
+	font-family: Arial, sans-serif;
+	width: 25%;
+    margin: 30px auto;
+    border: 2px solid #FF7E2D;
+    padding: 30px;
+    padding-top: 15px;
+
+    border-radius: 20px;
+    background-color:  #FFFAF6;
+}
+.card-con h3{
+	text-align: center;
+	padding-bottom: 10px;
+}
+.card-con img{
+	width: 30px;
+    height: auto;
+}
+.card-info {
+  	width: 50%;
+    margin: 30px auto;
+    /*border: 1px solid #e0e0e0;*/
+    padding: 40px;
+    padding-top: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color:  #fff;
+    display: block; /* Biến thẻ a thành block element */
+    text-align: right;
+
+}
+.card-info h1{
+	text-align: center;
+	padding: 10px;
+	font-size: 22px;
+	color: #000;
+	/*background-color: rgb(128, 255, 255);*/
+}
+
+
+.main-content {
+    display: flex;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.orders {
+    width: 80%;
+    padding: 20px;
+}
+
+.order {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.order-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.order-status {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.order-status.delivered {
+    color: green;
+}
+
+.order-status.preparing {
+    color: orange;
+}
+
+.order-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-image {
+    width: 150px;
+    height: auto;
+}
+
+.product-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.product-price {
+    text-align: right;
+}
+
+.product-price p {
+    font-size: 18px;
+    color: orange;
+    font-weight: bold;
+}
+
+.btn-review {
+    background-color: #ff9900;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-review:hover {
+    background-color: #ff6600;
+}
+
+.shipping-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shipping-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.shipping-container p {
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.shipping-card {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.shipping-card:hover {
+    border-color: #007bff;
+}
+
+.shipping-card.active {
+    border-color: #007bff;
+}
+
+.shipping-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.shipping-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+
+
+

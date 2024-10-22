@@ -1,0 +1,433 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Segoe UI, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 45px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+header h1 {
+    font-family: Segoe UI, sans-serif;
+    font-size: 20px;
+}
+header .logo img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-family: Segoe UI, sans-serif;
+}
+
+header .header-icons img {
+    width: 25px;
+    margin-left: 25px;
+}
+
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 35px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar img {
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+    border-radius: 50%; /* This will make the image round */
+    object-fit: cover; /* Ensures the image covers the box, useful if it's not a square */
+    margin-right: 10px; /* Adds space between the avatar and the text */
+    vertical-align: middle; /* Aligns the image with the text */
+}
+
+.sidebar h2 {
+    font-size: 20px;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding-top: 10px;
+    border-top: 1px solid #000;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+	margin-top: 50px;
+    padding-left: 20px;
+}
+
+.sidebar ul li a.active {
+    font-weight: bold;
+    color: #ff3366;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-menu a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-menu a {
+    margin-left: 20px;
+}
+
+.order-list {
+    margin-top: 20px;
+}
+
+.order-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.order-date {
+    color: #666;
+}
+
+.order-status.green {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.order-status.red {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.order-details {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.order-details img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.order-price {
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.order-actions {
+    margin-top: 15px;
+}
+
+.order-actions .btn {
+    padding: 8px 12px;
+    background-color: #eee;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.order-actions .btn-secondary {
+    margin-left: 10px;
+}
+
+.total-amount {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+.main-content {
+    display: flex;
+}
+
+.sidebar {
+    width: 23%;
+    background-color: #f9f9f9;
+    padding: 20px;
+	border-right: 1px solid #ddd;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 30px;
+    padding-left: 33px;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: sans-serif;
+}
+
+.orders {
+    width: 75%;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+.order {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.order-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.order-status {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.order-status.delivered {
+    color: green;
+}
+
+.order-status.preparing {
+    color: orange;
+}
+
+.order-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-image {
+    width: 150px;
+    height: auto;
+}
+
+.product-info {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.product-price {
+    text-align: right;
+}
+
+.product-price p {
+    font-size: 18px;
+    color: orange;
+    font-weight: bold;
+}
+
+.btn-review {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-review:hover {
+    background-color: #ff6600;
+}
+.avatar {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    border-radius: 50%; /* This will make the image round */
+    object-fit: cover; /* Ensures the image covers the box, useful if it's not a square */
+    margin-right: 10px; /* Adds space between the avatar and the text */
+    vertical-align: middle; /* Aligns the image with the text */
+}
+
+.voucher-section {
+    width: 80%;
+    padding: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.voucher-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.voucher-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.discount {
+    font-size: 24px;
+    color: #FF5722;
+    text-align: center;
+    width: 100px;
+    border-right: 1px solid #ddd;
+    padding-right: 20px;
+}
+
+.voucher-info {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.voucher-info p {
+    margin: 5px 0;
+}
+
+.btn-apply {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-apply:hover {
+    background-color: #45a049;
+}
+
+
+.favos {
+    width: 75%;
+    padding: 20px;
+    padding-left: 50px;
+}
+
+.favo {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.favo-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.favo-status {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.favo-status.delivered {
+    color: green;
+}
+
+.favo-status.preparing {
+    color: orange;
+}
+
+.favo-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.btn-unlike {
+    background-color: #e91e63;
+    color: white;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.btn-unlike:hover {
+    background-color: #fff;
+    color: #e91e63;
+    padding: 7px 15px;
+    border: 1px solid #e91e63;
+}
+
+.btn-add {
+    background-color: #ff6600;
+    color: white;
+    padding: 7px 21px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-right: 15px;
+}
